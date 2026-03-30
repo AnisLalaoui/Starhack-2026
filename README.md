@@ -4,6 +4,7 @@ Un compagnon de chevet intelligent qui rappelle, guide et automatise la prise de
 
 ---
 
+
 ## Aperçu
 
 MedBot est un système basé sur Arduino conçu pour réduire les oublis et les erreurs de prise de médicaments. Il combine rappels programmés, alertes progressives et distribution automatique pour accompagner l’utilisateur étape par étape.
