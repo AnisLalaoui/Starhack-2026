@@ -1,118 +1,182 @@
-# MedBot – Compagnon intelligent de médication
+# MedBot | Smart Medication Companion
 
-Un compagnon de chevet intelligent qui rappelle, guide et automatise la prise de médicaments grâce à un système embarqué.
+MedBot is an embedded smart medication assistance system designed to help users take their pills on time, reduce missed doses, and simplify daily medication management through reminders, alerts, and automatic dispensing.
 
----
+<p align="center">
+  <img src="assets/medbot-prototype.png" alt="MedBot prototype" width="320">
+</p>
 
+## Overview
 
-## Aperçu
+Medication adherence is a real challenge for many people, especially elderly users, busy individuals, or anyone managing multiple prescriptions. MedBot was developed as a compact embedded solution that can remind, guide, and assist the user during the medication process.
 
-MedBot est un système basé sur Arduino conçu pour réduire les oublis et les erreurs de prise de médicaments. Il combine rappels programmés, alertes progressives et distribution automatique pour accompagner l’utilisateur étape par étape.
+The system combines real time scheduling, progressive alerts, user confirmation, and automated pill dispensing in a single Arduino-based prototype.
 
----
+## Problem Statement
 
-## Problème
+Many users face difficulties such as:
 
-- Oubli de prise de médicaments  
-- Mauvais timing ou mauvaise dose  
-- Manque de suivi, surtout chez les personnes âgées ou occupées  
+- forgetting to take medication
+- taking it at the wrong time
+- missing proper follow-up
+- struggling with daily routine management
 
----
+These issues can reduce treatment effectiveness and increase health risks.
 
-## Solution
+## Proposed Solution
 
-MedBot propose :
+MedBot addresses this problem by offering:
 
--  **Rappels précis** grâce à une horloge temps réel  
--  **Alertes progressives** (douce → moyenne → urgente)  
--  **Distribution automatique des pilules**  
--  **Messages contextuels intelligents** (inspirés de l’IA)  
--  **Confirmation utilisateur via clavier**  
+- scheduled medication reminders using a real time clock
+- progressive alerts that become more noticeable over time
+- automatic pill dispensing
+- on-screen guidance through an LCD display
+- user confirmation through a keypad
+- a simple embedded system that works offline
 
----
+## Demo
 
-## Technologies utilisées
+Watch the project demo here:
 
-- **Arduino Uno R3**  
-- **RTC DS1307 (horloge)**  
-- **LCD 1602 (affichage)**  
-- **Servo moteur (trappe)**  
-- **Moteur pas à pas + ULN2003 (distribution)**  
-- **Clavier (entrée utilisateur)**  
-- **Buzzer + LED (alertes)**  
-- **C++ embarqué (Arduino)**  
+[MedBot Demo Video](https://youtube.com/shorts/HksG5nQMoSc?feature=share)
 
----
+## Prototype
 
-## Fonctionnalités
+Below is the physical prototype of MedBot:
 
-- ⏰ Plusieurs rappels par jour  
-- 🔁 Rappel quotidien de remplissage  
-- 🔊 Escalade intelligente des alertes  
-- 💬 Messages dynamiques (santé / calendrier)  
-- ⚙️ Intégration complète hardware + software  
+<p align="center">
+  <img src="assets/medbot-prototype.png" alt="MedBot physical prototype" width="340">
+</p>
 
----
+## Circuit Design
 
-##  Innovation
+Below is the hardware circuit design used for the system:
 
-Le système simule une interaction intelligente en utilisant des messages contextuels et une logique adaptative directement embarquée, sans connexion internet ni cloud.
+<p align="center">
+  <img src="assets/medbot-circuit.png" alt="MedBot circuit design" width="700">
+</p>
 
----
+## Key Features
 
-##  Architecture matérielle
+- multiple reminders per day
+- progressive alert escalation
+- automatic pill release mechanism
+- user confirmation through keypad input
+- LCD feedback and status display
+- full hardware and software integration
+- standalone embedded operation without internet connection
 
-| Composant | Broches |
-|----------|--------|
+## Technologies Used
+
+### Hardware
+- Arduino Uno R3
+- RTC DS1307
+- LCD 1602
+- servo motor
+- 28BYJ-48 stepper motor
+- ULN2003 driver
+- keypad
+- buzzer
+- LED
+
+### Software
+- Arduino IDE
+- Embedded C++
+
+## Hardware Architecture
+
+| Component | Function |
+|---|---|
+| Arduino Uno R3 | Main controller |
+| RTC DS1307 | Keeps track of real time |
+| LCD 1602 | Displays time and system messages |
+| Servo Motor | Controls the trap door |
+| Stepper Motor + ULN2003 | Rotates mechanism to prepare the next dose |
+| Keypad | User input and confirmation |
+| Buzzer | Audio alert |
+| LED | Visual alert |
+
+## Pin Configuration
+
+| Component | Pins |
+|---|---|
 | LCD 1602 | 2, 12, 13, A0, A1, A2 |
 | RTC DS1307 | A4 (SDA), A5 (SCL) |
-| Servo | 7 |
-| Stepper (ULN2003) | 8, 9, 10, 11 |
+| Servo Motor | 7 |
+| Stepper Motor + ULN2003 | 8, 9, 10, 11 |
 | Buzzer | 3 |
 | LED | A3 |
-| Clavier | 4, 5, 6 |
+| Keypad | 4, 5, 6 |
 
----
+## System Workflow
 
-##  Fonctionnement
+1. The RTC module continuously tracks the current time.
+2. When a scheduled medication time is reached, MedBot triggers an alert.
+3. The buzzer and LED notify the user.
+4. The LCD displays a message indicating that it is time to take the medication.
+5. The servo opens the trap door.
+6. Pills are dispensed into the container.
+7. The user confirms the intake using the keypad.
+8. The stepper motor prepares the next dose cycle.
+9. The system resets and waits for the next programmed reminder.
 
-1. L’horloge (RTC) suit l’heure réelle  
-2. À une heure définie, un rappel est déclenché  
-3. Les alertes deviennent progressivement plus fortes  
-4. Une trappe s’ouvre et les pilules sont distribuées  
-5. L’utilisateur confirme la prise  
-6. Le système se réinitialise pour le prochain rappel  
+## Why This Project Matters
 
----
+MedBot is not just a dispensing mechanism. It is a user-centered embedded system designed to improve autonomy, safety, and medication adherence in a simple and accessible way.
 
-##  Démonstration
+Its main strengths are:
 
-*(Ajoutez ici le lien de la vidéo)*
+- practical real world use case
+- complete integration of electronics, programming, and mechanical design
+- offline operation
+- scalable concept for future healthcare applications
 
----
+## Innovation
 
-##  Aperçu du prototype
+What makes MedBot interesting is its ability to simulate intelligent assistance using only embedded logic. The system does not rely on cloud services or internet connectivity. Instead, it uses local scheduling, hardware control, and contextual feedback to create a reliable and self-contained user experience.
 
-*(Ajoutez ici des images du montage)*
+## Future Improvements
 
----
+Possible next steps for the project include:
 
-## Améliorations futures
+- voice interaction
+- mobile application integration
+- IoT connectivity
+- health monitoring and usage analytics
+- improved pill detection
+- more secure dose verification
+- multi-user support
+- compact enclosure redesign
 
-- Intégration d’une vraie IA (voix, NLP)  
-- Application mobile  
-- Suivi de santé et analytics  
-- Connectivité IoT  
+## Repository Structure
 
----
+```bash
+MedBot/
+│
+├── assets/
+│   ├── medbot-prototype.png
+│   └── medbot-circuit.png
+│
+├── code/
+│   └── medbot.ino
+│
+├── docs/
+│   └── project-report.pdf
+│
+└── README.md
+
+Project Status
+
+This project is currently a functional prototype developed for academic and demonstration purposes.
+
+Disclaimer
+
+MedBot is a prototype and is not a certified medical device. It should not be used as a replacement for professional medical equipment or medical supervision.
 
 
-## ⚠️ Avertissement
 
-Ce projet est un prototype et ne constitue pas un dispositif médical certifié.
 
----
 
-## 🏁 Conclusion
 
-MedBot démontre comment un système embarqué peut améliorer le suivi médical quotidien en combinant automatisation, interaction utilisateur et feedback intelligent.
+
+
