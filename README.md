@@ -149,11 +149,11 @@ Possible next steps for the project include:
 - compact enclosure redesign
 
 
-##Project Status
+## Project Status
 
 This project is currently a functional prototype developed for academic and demonstration purposes.
 
-##Disclaimer
+## Disclaimer
 
 MedBot is a prototype and is not a certified medical device. It should not be used as a replacement for professional medical equipment or medical supervision.
 
