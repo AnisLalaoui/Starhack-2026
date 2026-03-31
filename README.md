@@ -3,18 +3,18 @@
 MedBot is an embedded smart medication assistance system designed to help users take their pills on time, reduce missed doses, and simplify daily medication management through reminders, alerts, and automatic dispensing.
 
 <p align="center">
-  <img src="assets/medbot-prototype.png" alt="MedBot prototype" width="320">
+  <img src="medbot-prototype.png" alt="MedBot prototype" width="320">
 </p>
 
 ## Overview
 
-Medication adherence is a real challenge for many people, especially elderly users, busy individuals, or anyone managing multiple prescriptions. MedBot was developed as a compact embedded solution that can remind, guide, and assist the user during the medication process.
+Medication adherence can be difficult for many people, especially elderly users, busy individuals, or anyone managing multiple prescriptions. MedBot was developed as a compact embedded solution that reminds, guides, and assists the user during the medication process.
 
-The system combines real time scheduling, progressive alerts, user confirmation, and automated pill dispensing in a single Arduino-based prototype.
+The system combines real time scheduling, progressive alerts, user confirmation, and automatic pill dispensing in a single Arduino-based prototype.
 
 ## Problem Statement
 
-Many users face difficulties such as:
+Many users face challenges such as:
 
 - forgetting to take medication
 - taking it at the wrong time
@@ -25,7 +25,7 @@ These issues can reduce treatment effectiveness and increase health risks.
 
 ## Proposed Solution
 
-MedBot addresses this problem by offering:
+MedBot addresses this problem by providing:
 
 - scheduled medication reminders using a real time clock
 - progressive alerts that become more noticeable over time
@@ -45,7 +45,7 @@ Watch the project demo here:
 Below is the physical prototype of MedBot:
 
 <p align="center">
-  <img src="assets/medbot-prototype.png" alt="MedBot physical prototype" width="340">
+  <img src="medbot-prototype.png" alt="MedBot physical prototype" width="340">
 </p>
 
 ## Circuit Design
@@ -53,7 +53,7 @@ Below is the physical prototype of MedBot:
 Below is the hardware circuit design used for the system:
 
 <p align="center">
-  <img src="assets/medbot-circuit.png" alt="MedBot circuit design" width="700">
+  <img src="medbot-circuit.png" alt="MedBot circuit design" width="700">
 </p>
 
 ## Key Features
@@ -81,7 +81,7 @@ Below is the hardware circuit design used for the system:
 
 ### Software
 - Arduino IDE
-- Embedded C++
+- Embedded C++ with Arduino
 
 ## Hardware Architecture
 
@@ -91,7 +91,7 @@ Below is the hardware circuit design used for the system:
 | RTC DS1307 | Keeps track of real time |
 | LCD 1602 | Displays time and system messages |
 | Servo Motor | Controls the trap door |
-| Stepper Motor + ULN2003 | Rotates mechanism to prepare the next dose |
+| Stepper Motor + ULN2003 | Rotates the dispensing mechanism |
 | Keypad | User input and confirmation |
 | Buzzer | Audio alert |
 | LED | Visual alert |
@@ -126,14 +126,14 @@ MedBot is not just a dispensing mechanism. It is a user-centered embedded system
 
 Its main strengths are:
 
-- practical real world use case
+- a practical real world use case
 - complete integration of electronics, programming, and mechanical design
 - offline operation
-- scalable concept for future healthcare applications
+- strong potential for future healthcare applications
 
 ## Innovation
 
-What makes MedBot interesting is its ability to simulate intelligent assistance using only embedded logic. The system does not rely on cloud services or internet connectivity. Instead, it uses local scheduling, hardware control, and contextual feedback to create a reliable and self-contained user experience.
+What makes MedBot interesting is its ability to simulate intelligent assistance using embedded logic only. The system does not rely on cloud services or internet connectivity. Instead, it uses local scheduling, hardware control, and contextual feedback to create a reliable and self-contained user experience.
 
 ## Future Improvements
 
@@ -151,19 +151,11 @@ Possible next steps for the project include:
 ## Repository Structure
 
 ```bash
-MedBot/
-│
-├── assets/
-│   ├── medbot-prototype.png
-│   └── medbot-circuit.png
-│
-├── code/
-│   └── medbot.ino
-│
-├── docs/
-│   └── project-report.pdf
-│
-└── README.md
+Starhack-2026/
+├── medbot-prototype.png
+├── medbot-circuit.png
+├── README.md
+└── Code_Starhack_2026_equipe2.ino
 
 Project Status
 
@@ -172,11 +164,3 @@ This project is currently a functional prototype developed for academic and demo
 Disclaimer
 
 MedBot is a prototype and is not a certified medical device. It should not be used as a replacement for professional medical equipment or medical supervision.
-
-
-
-
-
-
-
-
